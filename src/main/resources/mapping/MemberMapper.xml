@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.mapper.MemberMapper">
+  <resultMap id="BaseResultMap" type="com.test.model.Member">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="create_name" jdbcType="VARCHAR" property="createName" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="create_date" jdbcType="TIMESTAMP" property="createDate" />
+    <result column="update_name" jdbcType="VARCHAR" property="updateName" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="update_date" jdbcType="TIMESTAMP" property="updateDate" />
+    <result column="account_no" jdbcType="VARCHAR" property="accountNo" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="card_type" jdbcType="VARCHAR" property="cardType" />
+    <result column="card_no" jdbcType="VARCHAR" property="cardNo" />
+    <result column="card_front_url" jdbcType="VARCHAR" property="cardFrontUrl" />
+    <result column="card_back_url" jdbcType="VARCHAR" property="cardBackUrl" />
+    <result column="head_url" jdbcType="VARCHAR" property="headUrl" />
+    <result column="background_url" jdbcType="VARCHAR" property="backgroundUrl" />
+    <result column="nick_name" jdbcType="VARCHAR" property="nickName" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="region" jdbcType="VARCHAR" property="region" />
+    <result column="birthday" jdbcType="TIMESTAMP" property="birthday" />
+    <result column="personal_signature" jdbcType="VARCHAR" property="personalSignature" />
+    <result column="profession" jdbcType="VARCHAR" property="profession" />
+    <result column="interest" jdbcType="VARCHAR" property="interest" />
+    <result column="remix_days" jdbcType="INTEGER" property="remixDays" />
+    <result column="age_stage" jdbcType="VARCHAR" property="ageStage" />
+    <result column="constellation" jdbcType="VARCHAR" property="constellation" />
+    <result column="member_grade" jdbcType="INTEGER" property="memberGrade" />
+    <result column="member_type" jdbcType="INTEGER" property="memberType" />
+    <result column="complete_percentage" jdbcType="DOUBLE" property="completePercentage" />
+    <result column="login_type" jdbcType="VARCHAR" property="loginType" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="passwrod" jdbcType="VARCHAR" property="passwrod" />
+  </resultMap>
+</mapper>

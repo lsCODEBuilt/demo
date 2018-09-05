@@ -1,0 +1,88 @@
+#配置数据源
+spring:
+  datasource:
+     type: com.alibaba.druid.pool.DruidDataSource
+     #mysql 8 ,8之前版本使用com.mysql.jdbc.Driver
+     driver-class-name: com.mysql.jdbc.Driver
+     url: jdbc:mysql://47.106.222.13:3306/remix?characterEncoding=utf8&useSSL=false
+     username: root
+     password: '!Remix2018'
+     druid:
+        max-active: 20
+        initial-size: 1
+        max-wait: 60000
+        min-idle: 3
+        time-between-eviction-runs-millis: 60000
+        min-evictable-idle-time-millis: 300000
+        validation-query: SELECT 'x'
+        remove-abandoned: true
+        remove-abandoned-timeout: 180
+        connection-properties: clientEncoding=UTF-8
+        test-while-idle: false
+        test-on-borrow: true
+        test-on-return: false
+        pool-prepared-statements: true
+        max-pool-prepared-statement-per-connection-size: 20
+        filters:
+        use-global-data-source-stat: true
+  redis:
+    # Redis数据库索引（默认为0）
+    database: 0
+    # Redis服务器地址
+    host: localhost
+    # Redis服务器连接端口
+    port: 6379
+    # Redis服务器连接密码（默认为空）
+    password:
+    jedis:
+        pool:
+            #最大连接数
+            max-active: 8
+            #最大阻塞等待时间(负数表示没限制)
+            max-wait: -1m
+            #最大空闲
+            max-idle: 8
+              #最小空闲
+            min-idle: 0
+    timeout: 1000m
+#指定服务端口
+server.port: 8085
+# 定位模板的目录
+spring.mvc.view.prefix: /templates/
+# 给返回的页面添加后缀名
+spring.mvc.view.suffix: .html
+
+mybatis:
+  check-config-location: false
+  type-aliases-package: com.test.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    # 二级缓存的总开关
+    cache-enabled: true
+  mapper-locations: classpath:mapper/*.xml
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+## Redis数据库索引（默认为0）
+#springredis.database=0
+## Redis服务器地址
+#spring.redis.host=localhost
+## Redis服务器连接端口
+#spring.redis.port=6379
+## Redis服务器连接密码（默认为空）
+#spring.redis.password=
+## 连接池最大连接数（使用负值表示没有限制）
+#spring.redis.pool.max-active=8
+## 连接池最大阻塞等待时间（使用负值表示没有限制）
+#spring.redis.pool.max-wait=-1
+## 连接池中的最大空闲连接
+#spring.redis.pool.max-idle=8
+## 连接池中的最小空闲连接
+#spring.redis.pool.min-idle=0
+## 连接超时时间（毫秒）
+#spring.redis.timeout=0

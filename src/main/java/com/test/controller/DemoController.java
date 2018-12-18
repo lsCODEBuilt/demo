@@ -1,11 +1,10 @@
-package com.test.Contrloller;
+package com.test.controller;
 
 import com.test.common.dto.Result;
 import com.test.model.Member;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.LinkedBlockingDeque;
-import java.util.concurrent.SynchronousQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 
